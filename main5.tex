@@ -1,0 +1,47 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+
+\newtcolorbox{mybox}[1]{
+  colback=blue!5!white,
+  colframe=blue!75!black,
+  fonttitle=\bfseries,
+  title=#1
+}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+\lhead{Physics I / Calculus I}
+\chead{Istanbul University}
+\rhead{İbrahimcan Kiracı}
+
+\rfoot{Page \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\newcommand{\dv}[1]{\frac{d}{d#1}}
+\newcommand{\pdv}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\bint}[2]{\int_{#1}^{#2}}
+
+\title{5th project}
+\author{ibrahimcan kiraci}
+\date{\today}
+
+\begin{document}
+
+\begin{mybox}{Fundamental Theorem of Calculus}
+If $f$ is continuous on $[a, b]$, then:
+$$\bint{a}{b} f(x) dx = F(b) - F(a)$$
+\end{mybox}
+
+\maketitle
+\thispagestyle{fancy}
+\section{Experiment}
+
+$$\dv{x}(\sin x)$$
+$$\pdv{x}{y}(x^2 + 2y^3)$$
+$$\bint{0}{\pi}e^x +5x$$
+
+\end{document}
